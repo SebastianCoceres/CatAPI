@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Random Kittens</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../node_modules/simplelightbox/dist/simple-lightbox.min.css">
+    <link href="/dist/output.css" rel="stylesheet" />
+    <style>
+        * {
+            transition: .4s;
+        }
+    </style>
+</head>
+
+<body class="bg-slate-700">
+    <nav class="bg-gray-800">
+        <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+            <div class="relative flex items-center justify-between h-16">
+                <a href="./index.html" class="flex-1 flex items-center justify-start">
+                    <img class="w-10" src="./assets/cat_logo.png" alt="">
+                    <h1 class="text-3xl font-bold text-white invisible sm:visible">
+                        Random Kittens
+                    </h1>
+                </a>
+                <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+                    <div class="ml-3 relative">
+                        <div>
+                            <button id="callAnotherCat"
+                                class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded ml-2 active:text-yellow-600">
+                                <i class="fa-solid fa-arrow-rotate-left"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="ml-3 relative">
+                        <div>
+                            <a href="./pages/newCatForm.html"
+                                class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded ml-2 active:text-yellow-600">
+                                <i class="fa-solid fa-upload"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <main class="max-w-7xl mx-auto px-4 flex flex-wrap">
+
+        <section class="w-full md:w-[50%] px-4">
+            <h2 class="text-white underline text-2xl my-4">Galería</h2>
+            <div id="kittens_gallery"></div>
+        </section>
+
+        <section class="w-full md:w-[50%] px-4">
+            <h2 class="text-white underline text-2xl my-4">Favoritos</h2>
+            <div id="favourites__kittens"></div>
+        </section>
+    </main>
+
+    <script src="../node_modules/simplelightbox/dist/simple-lightbox.min.js"></script>
+    <script src="./main.mjs" type="module"></script>
+</body>
+
+</html>
